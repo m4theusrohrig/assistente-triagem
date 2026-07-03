@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triagem Veterinária</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Assistente de Triagem Veterinária</h1>
+    </header>
+
+    <section class="card">
+      <h2>Dados do caso</h2>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="animalName">Nome do animal</label>
+          <input type="text" id="animalName" placeholder="Ex.: Luna" />
+        </div>
+
+        <div class="form-group">
+          <label for="species">Espécie</label>
+          <input type="text" id="species" placeholder="Ex.: Gato, Cachorro" />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Idade</label>
+          <input type="text" id="age" placeholder="Ex.: 4 anos" />
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Duração dos sintomas</label>
+          <input type="text" id="duration" placeholder="Ex.: 2 dias" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="symptoms">Sintomas observados *</label>
+        <textarea
+          id="symptoms"
+          placeholder="Descreva os sintomas observados no animal..."
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Observações adicionais</label>
+        <textarea
+          id="notes"
+          placeholder="Ex.: animal sem apetite, tutor relatou vômitos após alimentação..."
+        ></textarea>
+      </div>
+
+      <div class="actions">
+        <button id="generateBtn">Gerar análise</button>
+        <button id="clearBtn" class="secondary">Limpar</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="result-header">
+        <h2>Análise da triagem</h2>
+        <span id="status" class="status">Aguardando geração</span>
+      </div>
+
+      <p id="resultPlaceholder" class="result-placeholder">
+        A análise gerada pela IA aparecerá aqui.
+      </p>
+
+      <div id="resultCard" class="result-card hidden">
+        <div class="result-grid">
+          <div class="result-field">
+            <span class="result-label">Nome do animal</span>
+            <div id="fieldAnimalName" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field">
+            <span class="result-label">Espécie</span>
+            <div id="fieldSpecies" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field">
+            <span class="result-label">Idade</span>
+            <div id="fieldAge" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Resumo do caso</span>
+            <div id="fieldSummary" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Possíveis hipóteses iniciais</span>
+            <div id="fieldHypotheses" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field">
+            <span class="result-label">Nível de urgência</span>
+            <div id="fieldUrgency" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Condutas iniciais sugeridas</span>
+            <div id="fieldConduct" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Exames ou avaliação recomendada</span>
+            <div id="fieldExams" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Encaminhamento</span>
+            <div id="fieldReferral" class="result-value">Não informado</div>
+          </div>
+
+          <div class="result-field result-field-full">
+            <span class="result-label">Observações importantes</span>
+            <div id="fieldNotes" class="result-value">Não informado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
