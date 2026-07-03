@@ -27,7 +27,7 @@ O sistema recebe informações sobre o animal e sintomas e gera uma análise est
 ### Frontend
 - HTML5
 - CSS3
-- JavaScript Vanilla
+- JavaScript
 
 ---
 
